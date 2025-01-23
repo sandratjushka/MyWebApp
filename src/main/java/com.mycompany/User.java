@@ -1,15 +1,11 @@
 package com.mycompany;
 
 import jakarta.persistence.*;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -26,6 +22,7 @@ public class User {
     @Column(length = 45, nullable = false, name = "last_name")
     private String lastName;
 
+    // Getters and Setters
     public Integer getId() {
         return id;
     }
